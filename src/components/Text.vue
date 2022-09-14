@@ -98,7 +98,7 @@ span {
 }
 
 .p {
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 500;
   line-height: 1.5;
 }

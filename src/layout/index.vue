@@ -13,7 +13,8 @@
               Rich text with well-defined typographic styles, inspired by
               <ColorLink :href="NextUILink">Next UI</ColorLink>
             </p>
-            <Text h3 em>This is a h3 size italic styled paragraph</Text>
+            <Text h3 em>This is a h3 italic styled paragraph</Text>
+            <Text>It also can replace <Code>p</Code> tag seamless</Text>
           </div>
           <h2><Code>ColorLink</Code></h2>
           <p>Colorful links. Different <Code>type</Code> has different color</p>

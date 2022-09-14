@@ -1,18 +1,16 @@
 <template>
   <h1>Resume.</h1>
   <section class="aboutMe">
-    <h2>+ About me</h2>
-    <p>
-      Hi! I'm <strong><em>Yuan Tianyu</em></strong> 👋
-    </p>
-    <p>
+    <Text h2>+ About me</Text>
+    <Text h3 em> Hi! I'm Tianyu 👋 </Text>
+    <Text>
       I'm currently doing algorithm testing at
       <ColorLink type="warning" href="https://www.aibee.cn/"
         >Aibee 🐝</ColorLink
       >
       to ensure and improve the quality of image algorithms. I'm interested in
-      Full-Stack technology, UI design, and 3D arts.
-    </p>
+      Full-Stack technology, UI design, 3D arts, and games of course.
+    </Text>
     <h2>+ Work Experience</h2>
     <h3>++ Software Engineer in Algorithm Test</h3>
     <p>
