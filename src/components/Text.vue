@@ -61,6 +61,7 @@ console.log();
 <style lang="scss" scope>
 span {
   display: block;
+
   &::selection {
     color: white;
     background-color: $blue300;
@@ -112,7 +113,7 @@ span {
 }
 
 .gradient {
-  background: -webkit-linear-gradient(45deg, $blue500 -20%, $purple100 70%);
+  background: -webkit-linear-gradient(45deg, rgb(56, 92, 255) -20%, rgb(194, 96, 255) 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

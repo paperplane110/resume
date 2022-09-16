@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <div class="container-left">
+    <Resume />
+    <!-- <div class="container-left">
       <section>
-        <Resume />
+
       </section>
       <section>
         <h1>Components.</h1>
@@ -44,7 +45,7 @@
       <Text>Paragraphs </Text>
       <Text h2 em>Header 2 with em</Text>
       <Text b em>YUI, UI kit built by tyyuan</Text>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -58,6 +59,8 @@ const NextUILink = "https://nextui.org/docs/components/text";
   display: flex;
   width: 100%;
   height: 100%;
+  text-align: left;
+  justify-content: center;
 
   &-left {
     flex: 1;
