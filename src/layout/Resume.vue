@@ -57,13 +57,13 @@
       </li>
     </ul>
     <h2>+ Education</h2>
-    <h3>++ Msc. Robotics
+    <h3>++ MSc. Robotics
     </h3>
     <p>
       2019.10-2020.10 <ColorLink :href="uobLink">@University of Bristol
       </ColorLink>, UK
     </p>
-    <h3>++ Bsc. Vehicle engineering
+    <h3>++ BSc. Vehicle Engineering
     </h3>
     <p>
       2015.9-2019.6 <ColorLink type="secondary" :href="scutLink">@South China University of Technology
