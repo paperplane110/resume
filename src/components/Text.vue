@@ -5,42 +5,42 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "@vue/reactivity";
+import { computed } from '@vue/reactivity'
 
 type Props = {
-  h1?: boolean;
-  h2?: boolean;
-  h3?: boolean;
-  h4?: boolean;
-  em?: boolean;
-  b?: boolean;
-  p?: boolean;
-  size?: string | number;
-  weight?: string | number;
-  gradient?: boolean;
-};
+  h1?: boolean
+  h2?: boolean
+  h3?: boolean
+  h4?: boolean
+  em?: boolean
+  b?: boolean
+  p?: boolean
+  size?: string | number
+  weight?: string | number
+  gradient?: boolean
+}
 
-const props = defineProps<Props>();
+const props = defineProps<Props>()
 
 const styleList = computed(() => {
-  const list: string[] = [];
+  const list: string[] = []
   if (props.h1) {
-    list.push("h1");
+    list.push('h1')
   } else if (props.h2) {
-    list.push("h2");
+    list.push('h2')
   } else if (props.h3) {
-    list.push("h3");
+    list.push('h3')
   } else if (props.h4) {
-    list.push("h4");
+    list.push('h4')
   } else {
-    list.push("p");
+    list.push('p')
   }
-  if (props.em) list.push("em");
-  if (props.b) list.push("b");
-  if (props.gradient) list.push("gradient");
-  console.log(list);
-  return list;
-});
+  if (props.em) list.push('em')
+  if (props.b) list.push('b')
+  if (props.gradient) list.push('gradient')
+  console.log(list)
+  return list
+})
 
 // const textGradient = computed(() => {
 //   if (props.gradient) {
@@ -55,7 +55,7 @@ const styleList = computed(() => {
 //   }
 // });
 
-console.log();
+console.log()
 </script>
 
 <style lang="scss" scope>
@@ -64,7 +64,7 @@ span {
 
   &::selection {
     color: white;
-    background-color: $blue300;
+    background-color: $blue400;
     // for gradient::selection style
     -webkit-text-fill-color: rgb(255, 255, 255);
   }
@@ -113,7 +113,11 @@ span {
 }
 
 .gradient {
-  background: -webkit-linear-gradient(45deg, rgb(56, 92, 255) -20%, rgb(194, 96, 255) 50%);
+  background: -webkit-linear-gradient(
+    45deg,
+    rgb(56, 92, 255) -20%,
+    rgb(194, 96, 255) 50%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

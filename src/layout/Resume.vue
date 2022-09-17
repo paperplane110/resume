@@ -41,6 +41,7 @@
           <Text h3>Others</Text>
           <ul>
             <li>Language: Chinese(Mother tongue), English(IELTS: 7)</li>
+            <li>Modeling: Blender, CATIA</li>
           </ul>
         </div>
       </div>
@@ -106,12 +107,12 @@
 
     <section>
       <h2><font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education</h2>
-      <h3>++ MSc. Robotics</h3>
+      <h3>MSc. Robotics</h3>
       <p>
         2019.10-2020.10
         <ColorLink :href="uobLink">@University of Bristol </ColorLink>, UK
       </p>
-      <h3>++ BSc. Vehicle Engineering</h3>
+      <h3>BSc. Vehicle Engineering</h3>
       <p>
         2015.9-2019.6
         <ColorLink type="secondary" :href="scutLink"

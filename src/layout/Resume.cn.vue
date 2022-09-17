@@ -10,8 +10,8 @@
         <ColorLink type="warning" href="https://www.aibee.cn/">
           Aibee 🐝
         </ColorLink>
-        的人工智能公司，是一名算法测试开发工程师，我主要负责保证算法模型的质量并辅助提升其性能。
-        我最近对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
+        的人工智能企业，是一名算法测试开发工程师，我主要负责保证算法模型的质量并辅助提升其性能。
+        最近，我对于全栈技术、UI设计、3D美术很感兴趣（当然，同时也是一名忠实的Steam玩家）
       </Text>
     </section>
 
@@ -40,7 +40,8 @@
         <div class="skills-card">
           <Text h3>其他</Text>
           <ul>
-            <li>语言能力: 英语（雅思：7）</li>
+            <li>语言能力: 中文（母语）,英语（雅思: 7）</li>
+            <li>建模: Blender, CATIA</li>
           </ul>
         </div>
       </div>

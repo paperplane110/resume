@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="nav-bar">
+    <div class="nav">
       <div><img class="site-icon" :src="TianyuIcon" /></div>
       <font-awesome-icon
         @click="changLang"
@@ -11,6 +11,7 @@
     </div>
     <ResumeCn v-if="isCn" />
     <Resume v-else />
+
     <!-- <div class="container-left">
       <section>
 
@@ -62,7 +63,9 @@
 <script setup lang="ts">
 import Resume from './Resume.vue'
 import ResumeCn from './Resume.cn.vue'
-import TianyuIcon from '../../public/tianyu.svg'
+import TianyuIcon from '/tianyu-bold.svg'
+import 'animate.css'
+
 import { ref } from 'vue'
 const NextUILink = 'https://nextui.org/docs/components/text'
 
@@ -107,11 +110,7 @@ const changLang = () => {
 .site-icon {
   width: 50px;
   padding: 0.7rem 1rem 0 1.5rem;
-  transition: stroke 0.3s;
-  &:hover {
-    stroke: #646cff;
-    cursor: pointer;
-  }
+  transition: all 0.3s;
 }
 
 .lang-icon {
@@ -121,9 +120,12 @@ const changLang = () => {
     color: #646cff;
     cursor: pointer;
   }
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
-.nav-bar {
+.nav {
   width: 800px;
   display: flex;
   justify-content: space-between;
