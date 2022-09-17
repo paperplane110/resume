@@ -1,7 +1,23 @@
 // colors
+$purple100: #cda2ff;
+$purple200: #b472ff;
+$purple300: #ab62ff;
+$purple400: #9a42ff;
+$purple500: #8922ff;
+$purple600: #8012ff;
+$purple700: #6900e1;
+
+$blue100: #babdfc;
+$blue200: #8a8ffa;
+$blue300: #7980f9;
+$blue400: #5961f8;
+$blue500: #3942f7;
+$blue600: #2833f6;
+$blue700: #0a14e2;
+
 $color: black;
-$primary-color: #ac64ff;
-$secondary-color: #646cff;
+$primary-color: $purple400;
+$secondary-color: $blue400;
 $success-color: #16c967;
 $warning-color: orange;
 $error-color: #ff6464;

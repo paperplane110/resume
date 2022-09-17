@@ -42,7 +42,7 @@ ul {
   line-height: 1.5;
 }
 
-p::selection {
+p::selection, li::selection {
   color: white;
   background-color: #535bf2;
 }
