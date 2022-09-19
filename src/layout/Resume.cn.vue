@@ -41,7 +41,7 @@
           <Text h3>其他</Text>
           <ul>
             <li>语言能力: 中文（母语）,英语（雅思: 7）</li>
-            <li>建模: Blender, CATIA</li>
+            <li>设计: Figma, Blender, CATIA</li>
           </ul>
         </div>
       </div>
@@ -151,7 +151,7 @@ section {
     background-color: rgba(208, 208, 208, 0.3);
     // margin: 0.5rem;
     border: 3px solid #213547;
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: border-color 0.3s;
 
     &:hover {

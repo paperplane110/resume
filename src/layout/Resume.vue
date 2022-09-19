@@ -41,7 +41,7 @@
           <Text h3>Others</Text>
           <ul>
             <li>Language: Chinese(Mother tongue), English(IELTS: 7)</li>
-            <li>Modeling: Blender, CATIA</li>
+            <li>Design: Figma, Blender, CATIA</li>
           </ul>
         </div>
       </div>

@@ -12,10 +12,7 @@
     <ResumeCn v-if="isCn" />
     <Resume v-else />
 
-    <!-- <div class="container-left">
-      <section>
-
-      </section>
+    <div class="components" v-if="!isCn">
       <section>
         <h1>Components.</h1>
         <div>
@@ -46,9 +43,32 @@
           </p>
           <Code>print(Hello world!)</Code>
         </div>
+        <div>
+          <h2><Code>Card</Code></h2>
+          <Card>
+            <template #header><Text>Card Header</Text></template>
+            <template #body>
+              <ul>
+                <li>基本技能: Python, Shell, Docker</li>
+                <li>自动化: Airflow, GitLab-CI</li>
+                <li>数据分析和可视化: Numpy, Pandas, Opencv, Plotly</li>
+              </ul>
+            </template>
+          </Card>
+        </div>
+        <br />
+        <div>
+          <h2><Code>Sparkles</Code></h2>
+          This is <Sparkles>sparking text</Sparkles>, and
+          <Sparkles rainbow> <h4>rainbow sparkles</h4> </Sparkles>. You can also
+          choose what color you like
+          <Sparkles color="seagreen">
+            <p>Specific color text</p>
+          </Sparkles>
+        </div>
       </section>
     </div>
-    <div class="container-right">
+    <!-- <div class="container-right">
       <Text h1 gradient>Header 1</Text>
       <Text h2>Header 2</Text>
       <Text h3>Header 3</Text>
@@ -63,7 +83,8 @@
 <script setup lang="ts">
 import Resume from './Resume.vue'
 import ResumeCn from './Resume.cn.vue'
-import TianyuIcon from '/tianyu-bold.svg'
+import TianyuIcon from '/yty.svg'
+import Sparkles from '../components/Sparkles/Sparkles.vue'
 import 'animate.css'
 
 import { ref } from 'vue'
@@ -108,9 +129,14 @@ const changLang = () => {
 }
 
 .site-icon {
-  width: 50px;
+  width: 70px;
   padding: 0.7rem 1rem 0 1.5rem;
   transition: all 0.3s;
+
+  &:hover {
+    // filter: hue-rotate(150deg);
+    filter: contrast(150%);
+  }
 }
 
 .lang-icon {
@@ -132,5 +158,9 @@ const changLang = () => {
   align-items: center;
   background-color: rgba(208, 208, 208, 0.3);
   border-radius: 10px;
+}
+
+.components {
+  width: 800px;
 }
 </style>
