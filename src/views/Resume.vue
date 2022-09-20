@@ -1,6 +1,13 @@
 <template>
   <div class="aboutMe">
-    <Text h1>Resume.</Text>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <Text h1>
+        Resume.
+      </Text>
+      <router-link to="/zh/cv">
+        <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+      </router-link>
+    </div>
 
     <section>
       <Text h2>

@@ -4,6 +4,7 @@
       <div><img class="site-icon" :src="TianyuIcon" /></div>
       <font-awesome-icon @click="changLang" class="lang-icon" icon="fa-solid fa-language" size="2x" />
     </div>
+    <NavBar />
     <div class="content">
       <ResumeCn v-if="isCn" />
       <Resume v-else />
@@ -67,23 +68,14 @@
         </div>
       </section>
     </div>
-    <!-- <div class="container-right">
-      <Text h1 gradient>Header 1</Text>
-      <Text h2>Header 2</Text>
-      <Text h3>Header 3</Text>
-      <Text h4>Header 4</Text>
-      <Text>Paragraphs </Text>
-      <Text h2 em>Header 2 with em</Text>
-      <Text b em>YUI, UI kit built by tyyuan</Text>
-    </div> -->
   </div>
 </template>
 
 <script setup lang="ts">
-import Resume from './Resume.vue'
-import ResumeCn from './Resume.cn.vue'
+import Resume from '../views/Resume.vue'
+import ResumeCn from '../views/Resume.cn.vue'
 import TianyuIcon from '/yty.svg'
-import Sparkles from '../components/Sparkles/Sparkles.vue'
+import NavBar from '../components/NavBar/index.vue'
 import 'animate.css'
 
 import { ref } from 'vue'
@@ -111,20 +103,6 @@ const changLang = () => {
   text-align: left;
   justify-content: center;
   align-items: center;
-
-  &-left {
-    flex: 1;
-    text-align: left;
-    // background-color: rgba(255, 229, 127, 0.072);
-    padding: 1rem;
-  }
-
-  &-right {
-    flex: 1;
-    text-align: left;
-    background-color: aliceblue;
-    padding: 1rem;
-  }
 }
 
 .site-icon {

@@ -1,12 +1,7 @@
 <template>
   <span class="wrapper">
-    <SparkleInstance
-      v-for="sparkle in sparkleList"
-      :key="sparkle.id"
-      :color="sparkle.color"
-      :size="sparkle.size"
-      :style="sparkle.style"
-    />
+    <SparkleInstance v-for="sparkle in sparkleList" :key="sparkle.id" :color="sparkle.color" :size="sparkle.size"
+      :style="sparkle.style" />
     <slot></slot>
   </span>
 </template>
@@ -35,7 +30,7 @@ const generateSparkle = (color = DEFAULT_COLOR) => {
     color,
     size: random(10, 20),
     style: {
-      top: random(20, 50) + '%',
+      top: random(0, 50) + '%',
       left: random(0, 100) + '%',
       zIndex: 2,
     },

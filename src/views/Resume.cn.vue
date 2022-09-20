@@ -1,7 +1,13 @@
 <template>
   <div class="aboutMe">
-    <Text h1>个人简历.</Text>
-
+    <div style="display: flex; align-items:center; justify-content: space-between;">
+      <Text h1>
+        个人简历.
+      </Text>
+      <router-link to="/en/cv">
+        <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+      </router-link>
+    </div>
     <section>
       <Text h2>
         <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍
@@ -89,7 +95,7 @@
           积极协调数据采集团队，为算法训练补充数据。
           并最终通过了金融支付领域的关键认证
           <ColorLink :href="bctcLink" target="_blank">BCTC 银联活体认证
-          </ColorLink>
+          </ColorLink>。并进行了团队经验分享。
         </li>
         <li>
           面对千万级底库人脸识别测试时间过长的问题，主动进行相关资料的搜索和学习，
@@ -113,12 +119,15 @@
         2019.10-2020.10
         <ColorLink :href="uobLink">@布里斯托大学 </ColorLink>, 英国布里斯托
       </p>
+      <p>核心课程：图像处理与计算机视觉，人工智能导论，智能信息系统，机器人学导论</p>
+
       <h3>车辆工程·学士</h3>
       <p>
         2015.9-2019.6
         <ColorLink type="secondary" :href="scutLink">@华南理工大学 </ColorLink>,
         中国广州
       </p>
+      <p>核心课程：汽车构造，汽车发动机原理，汽车理论，单片机原理</p>
     </section>
   </div>
 </template>
@@ -165,7 +174,7 @@ section {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 800px) {
+@media screen and (min-width: 300px) and (max-width: 850px) {
   .skills {
     flex-direction: column;
 
