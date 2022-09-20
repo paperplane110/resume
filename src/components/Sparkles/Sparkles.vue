@@ -1,7 +1,12 @@
 <template>
   <span class="wrapper">
-    <SparkleInstance v-for="sparkle in sparkleList" :key="sparkle.id" :color="sparkle.color" :size="sparkle.size"
-      :style="sparkle.style" />
+    <SparkleInstance
+      v-for="sparkle in sparkleList"
+      :key="sparkle.id"
+      :color="sparkle.color"
+      :size="sparkle.size"
+      :style="sparkle.style"
+    />
     <slot></slot>
   </span>
 </template>
@@ -52,12 +57,20 @@ const regenerate = () => {
   }
 }
 
-// while (1) {
-//   const delay = random(20, 600)
-//   setTimeout(regenerate, delay)
-// }
+const setRandomInterval = (
+  func: TimerHandler,
+  minInterval: number,
+  maxInterval: number
+) => {
+  const randomRange = maxInterval - minInterval
+  setInterval(() => {
+    const randomDelay = random(0, randomRange)
+    setTimeout(func, randomDelay)
+  }, minInterval)
+}
 
-setInterval(regenerate, 400)
+// setInterval(regenerate, 400)
+setRandomInterval(regenerate, 400, 1000)
 </script>
 
 <style scoped lang="scss">
