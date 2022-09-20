@@ -3,7 +3,9 @@
     <Text h1>个人简历.</Text>
 
     <section>
-      <Text h2><font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍</Text>
+      <Text h2>
+        <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍
+      </Text>
       <Text h3> 你好，我叫袁天宇！ </Text>
       <Text>
         我目前就职于一家叫做
@@ -54,9 +56,7 @@
       </h2>
       <h3>算法测试开发工程师</h3>
       <p>
-        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/"
-          >@Aibee 🐝</ColorLink
-        >
+        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </p>
       <h3>主要职能与职责</h3>
       <ul>
@@ -88,8 +88,7 @@
           与算法工程师紧密合作，在测试中发现并总结人脸活体算法在应对实际场景时所暴露的问题。
           积极协调数据采集团队，为算法训练补充数据。
           并最终通过了金融支付领域的关键认证
-          <ColorLink :href="bctcLink" target="_blank"
-            >BCTC 银联活体认证
+          <ColorLink :href="bctcLink" target="_blank">BCTC 银联活体认证
           </ColorLink>
         </li>
         <li>
@@ -106,7 +105,9 @@
     </section>
 
     <section>
-      <h2><font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历</h2>
+      <h2>
+        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历
+      </h2>
       <h3>机器人学·硕士</h3>
       <p>
         2019.10-2020.10
@@ -133,7 +134,7 @@ const scutLink =
 
 <style scope lang="scss">
 .aboutMe {
-  width: 800px;
+  width: 100%;
 }
 
 section {
@@ -160,6 +161,16 @@ section {
 
     ul {
       padding-inline-start: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .skills {
+    flex-direction: column;
+
+    &-card {
+      margin-bottom: 1rem;
     }
   }
 }

@@ -2,17 +2,14 @@
   <div class="container">
     <div class="nav">
       <div><img class="site-icon" :src="TianyuIcon" /></div>
-      <font-awesome-icon
-        @click="changLang"
-        class="lang-icon"
-        icon="fa-solid fa-language"
-        size="2x"
-      />
+      <font-awesome-icon @click="changLang" class="lang-icon" icon="fa-solid fa-language" size="2x" />
     </div>
-    <ResumeCn v-if="isCn" />
-    <Resume v-else />
+    <div class="content">
+      <ResumeCn v-if="isCn" />
+      <Resume v-else />
+    </div>
 
-    <div class="components" v-if="!isCn">
+    <div class="content" v-if="!isCn">
       <section>
         <h1>Components.</h1>
         <div>
@@ -60,7 +57,9 @@
         <div>
           <h2><Code>Sparkles</Code></h2>
           This is <Sparkles>sparking text</Sparkles>, and
-          <Sparkles rainbow> <h4>rainbow sparkles</h4> </Sparkles>. You can also
+          <Sparkles rainbow>
+            <h4>rainbow sparkles</h4>
+          </Sparkles>. You can also
           choose what color you like
           <Sparkles color="seagreen">
             <p>Specific color text</p>
@@ -142,10 +141,12 @@ const changLang = () => {
 .lang-icon {
   margin-right: 1rem;
   transition: color 0.3s;
+
   &:hover {
     color: #646cff;
     cursor: pointer;
   }
+
   &:active {
     transform: translateY(2px);
   }
@@ -160,7 +161,33 @@ const changLang = () => {
   border-radius: 10px;
 }
 
-.components {
-  width: 800px;
+@media screen and (min-width: 800px) {
+  .content {
+    width: 800px;
+  }
+
+  .nav {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .content {
+    width: 400px;
+  }
+
+  .nav {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+  .content {
+    width: 300px;
+  }
+
+  .nav {
+    width: 300px;
+  }
 }
 </style>

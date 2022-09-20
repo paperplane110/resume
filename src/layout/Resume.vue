@@ -3,13 +3,13 @@
     <Text h1>Resume.</Text>
 
     <section>
-      <Text h2><font-awesome-icon icon="fa-solid fa-smile" /> About me</Text>
+      <Text h2>
+        <font-awesome-icon icon="fa-solid fa-smile" /> About me
+      </Text>
       <Text h3 em> Hi! I'm Tianyu 👋 </Text>
       <Text>
         I'm currently doing algorithm testing at
-        <ColorLink type="warning" href="https://www.aibee.cn/"
-          >Aibee 🐝</ColorLink
-        >
+        <ColorLink type="warning" href="https://www.aibee.cn/">Aibee 🐝</ColorLink>
         to ensure and improve the quality of image algorithms. I'm interested in
         Full-Stack technology, UI design, 3D arts, and games of course.
       </Text>
@@ -53,9 +53,7 @@
       </h2>
       <h3>Software Engineer in Algorithm Test</h3>
       <p>
-        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/"
-          >@Aibee 🐝</ColorLink
-        >
+        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
       </p>
       <h3>Key Qualifications & Responsibilities</h3>
       <ul>
@@ -92,21 +90,20 @@
         <li>
           Cooperating with algorithms researchers, pass the key algorithm
           certification:
-          <ColorLink :href="bctcLink" target="_blank"
-            >BCTC face anti-spoofing</ColorLink
-          >certification.
+          <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
         </li>
         <li>
           Optimized the face recognition test tools with
-          <ColorLink type="secondary" :href="faissLink" target="_blank"
-            >Faiss</ColorLink
-          >, shortening test time nearly 4X.
+          <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test time nearly
+          4X.
         </li>
       </ul>
     </section>
 
     <section>
-      <h2><font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education</h2>
+      <h2>
+        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education
+      </h2>
       <h3>MSc. Robotics</h3>
       <p>
         2019.10-2020.10
@@ -115,9 +112,7 @@
       <h3>BSc. Vehicle Engineering</h3>
       <p>
         2015.9-2019.6
-        <ColorLink type="secondary" :href="scutLink"
-          >@South China University of Technology </ColorLink
-        >, China
+        <ColorLink type="secondary" :href="scutLink">@South China University of Technology </ColorLink>, China
       </p>
     </section>
   </div>
@@ -134,8 +129,9 @@ const scutLink =
 
 <style scope lang="scss">
 .aboutMe {
-  width: 800px;
+  width: 100%;
 }
+
 
 section {
   margin-bottom: 3rem;
@@ -161,6 +157,16 @@ section {
 
     ul {
       padding-inline-start: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .skills {
+    flex-direction: column;
+
+    &-card {
+      margin-bottom: 1rem;
     }
   }
 }
