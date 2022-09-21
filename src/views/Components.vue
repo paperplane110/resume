@@ -66,24 +66,27 @@
     <section>
       <h2><Code>Description</Code></h2>
       <Text>
-        The <Code>Description</Code> component contains an image and it's description. The corners of the image have
-        been rounded. The image is defined by <Code>src</Code> prop. The description could be defined as a child
-        components.
+        The <Code>Description</Code> component contains an image and it's
+        description. The corners of the image have been rounded. The image is
+        defined by <Code>src</Code> prop. The description could be defined as a
+        child components.
       </Text>
       <Description></Description>
-      <Text>The image and text's order could be reversed when you pass <Code>reverse</Code> props.</Text>
-      <Description reverse></Description>
+      <Text
+        >The image and text's order could be reversed when you pass
+        <Code>reverse</Code> props. Additionally, the width proportion of the
+        image and text area can be modified by given number to
+        <Code>textSize</Code> or <Code>imgSize</Code> props.
+      </Text>
+      <Description reverse src="/img/sample2.jpg" textSize="3"></Description>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import NavBar from '../components/NavBar/index.vue'
-import Description from '../components/Description/index.vue';
 
 const NextUILink = 'https://nextui.org/docs/components/text'
 </script>
 
-<style scope>
-
-</style>
+<style scope></style>

@@ -15,6 +15,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 code {
   font-family: 'Courier new', Avenir, Helvetica, Arial, sans-serif;
 }

@@ -7,6 +7,7 @@ import Code from "./components/code.vue";
 import ColorLink from "./components/ColorA/index.vue";
 import Text from "./components/Text.vue";
 import Sparkles from "./components/Sparkles/Sparkles.vue";
+import Description from "./components/Description/index.vue";
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -26,4 +27,5 @@ createApp(App)
   .component("Code", Code)
   .component("Card", Card)
   .component("Sparkles", Sparkles)
+  .component('Description', Description)
   .mount("#app");
