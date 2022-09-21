@@ -7,5 +7,6 @@
 <style lang="scss" scope>
 .inline-code {
   color: $primary-color;
+  font-weight: 600;
 }
 </style>

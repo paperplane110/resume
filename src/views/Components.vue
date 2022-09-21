@@ -1,16 +1,16 @@
 <template>
-  <section>
+  <div>
     <h1>Components.</h1>
-    <div>
-      <div>
-        <h2><Code>Text</Code></h2>
-        <p>
-          Rich text with well-defined typographic styles, inspired by
-          <ColorLink :href="NextUILink">Next UI</ColorLink>
-        </p>
-        <Text h3 em>This is a h3 italic styled paragraph</Text>
-        <Text>It also can replace <Code>p</Code> tag seamless</Text>
-      </div>
+    <section>
+      <h2><Code>Text</Code></h2>
+      <p>
+        Rich text with well-defined typographic styles, inspired by
+        <ColorLink :href="NextUILink">Next UI</ColorLink>
+      </p>
+      <Text h3 em>This is a h3 italic styled paragraph</Text>
+      <Text>It also can replace <Code>p</Code> tag seamless</Text>
+    </section>
+    <section>
       <h2><Code>ColorLink</Code></h2>
       <p>Colorful links. Different <Code>type</Code> has different color</p>
       <p>
@@ -20,16 +20,16 @@
         <ColorLink type="warning">warning</ColorLink>
         <ColorLink type="error">error</ColorLink>
       </p>
-    </div>
-    <div>
+    </section>
+    <section>
       <h2><Code>Code</Code></h2>
       <p>
         Customize inline code snippets. `` will be added around the code
         automatically.
       </p>
       <Code>print(Hello world!)</Code>
-    </div>
-    <div>
+    </section>
+    <section>
       <h2><Code>Card</Code></h2>
       <Card>
         <template #header><Text>Card Header</Text></template>
@@ -44,9 +44,8 @@
           <Text>Footer: All above is just joking 🤣</Text>
         </template>
       </Card>
-    </div>
-    <br />
-    <div>
+    </section>
+    <section>
       <h2><Code>Sparkles</Code></h2>
       <Text>
         This is <Sparkles>sparking text</Sparkles>. You can use it to wrap some
@@ -55,22 +54,36 @@
         whatever color you like:
         <Sparkles color="lightseagreen"> lightseagreen sparkle.</Sparkles>
       </Text>
-    </div>
-    <div>
+    </section>
+    <section>
       <h2><Code>NavBar</Code></h2>
       <p>
         The <Code>NavBar</Code> has been divided into two parts, the site icon
         is at the left end, the links icon is at the rightside
       </p>
       <NavBar></NavBar>
-    </div>
-  </section>
+    </section>
+    <section>
+      <h2><Code>Description</Code></h2>
+      <Text>
+        The <Code>Description</Code> component contains an image and it's description. The corners of the image have
+        been rounded. The image is defined by <Code>src</Code> prop. The description could be defined as a child
+        components.
+      </Text>
+      <Description></Description>
+      <Text>The image and text's order could be reversed when you pass <Code>reverse</Code> props.</Text>
+      <Description reverse></Description>
+    </section>
+  </div>
 </template>
 
 <script setup lang="ts">
 import NavBar from '../components/NavBar/index.vue'
+import Description from '../components/Description/index.vue';
 
 const NextUILink = 'https://nextui.org/docs/components/text'
 </script>
 
-<style scope></style>
+<style scope>
+
+</style>
