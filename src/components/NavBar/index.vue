@@ -6,31 +6,38 @@
       </router-link>
     </div>
     <div class="nav-links">
-      <router-link v-for="linkInfo in linkList" :key="linkInfo.name" :to="linkInfo.to">
+      <router-link
+        v-for="linkInfo in linkList"
+        :key="linkInfo.name"
+        :to="linkInfo.to"
+      >
         <div class="nav-links-item">
-          <font-awesome-icon class="lang-icon" :icon="`fa-solid ${linkInfo.icon}`" size="1x" />
+          <font-awesome-icon
+            class="lang-icon"
+            :icon="`fa-solid ${linkInfo.icon}`"
+            size="1x"
+          />
         </div>
       </router-link>
     </div>
   </div>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import TianyuIcon from '/yty.svg'
 
 const linkList = [
   {
-    name: "components",
-    icon: "fa-cubes",
-    to: "/components"
+    name: 'components',
+    icon: 'fa-cubes',
+    to: '/components',
   },
   {
-    name: "cv",
-    icon: "fa-user",
-    to: "/en/cv"
-  }
+    name: 'cv',
+    icon: 'fa-user',
+    to: '/en/cv',
+  },
 ]
-
 </script>
 
 <style scope lang="scss">
@@ -41,6 +48,7 @@ const linkList = [
   align-items: center;
   background-color: rgba(208, 208, 208, 0.3);
   border-radius: 10px;
+  margin-top: 2rem;
 
   &-icon {
     width: 70px;
@@ -55,7 +63,9 @@ const linkList = [
 
   &-links {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 0.5rem;
 
     &-item {
       display: flex;
