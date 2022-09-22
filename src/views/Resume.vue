@@ -1,22 +1,28 @@
 <template>
   <div class="aboutMe">
-    <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div
+      style="display: flex; align-items: center; justify-content: space-between"
+    >
       <Text h1>
-        Resume.
+        {{ title }}
       </Text>
       <router-link to="/zh/cv">
-        <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+        <font-awesome-icon
+          class="lang-icon"
+          icon="fa-solid fa-language"
+          size="2x"
+        />
       </router-link>
     </div>
 
     <section>
-      <Text h2>
-        <font-awesome-icon icon="fa-solid fa-smile" /> About me
-      </Text>
+      <Text h2> <font-awesome-icon icon="fa-solid fa-smile" /> About me </Text>
       <Text h3 em> Hi! I'm Tianyu 👋 </Text>
       <Text>
         I'm currently doing algorithm testing at
-        <ColorLink type="warning" href="https://www.aibee.cn/">Aibee 🐝</ColorLink>
+        <ColorLink type="warning" href="https://www.aibee.cn/"
+          >Aibee 🐝</ColorLink
+        >
         to ensure and improve the quality of image algorithms. I'm interested in
         Full-Stack technology, UI design, 3D arts, and games of course.
       </Text>
@@ -60,7 +66,9 @@
       </h2>
       <h3>Software Engineer in Algorithm Test</h3>
       <p>
-        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
+        2020.4-Current<ColorLink type="warning" href="https://www.aibee.cn/"
+          >@Aibee 🐝</ColorLink
+        >
       </p>
       <h3>Key Qualifications & Responsibilities</h3>
       <ul>
@@ -97,20 +105,21 @@
         <li>
           Cooperating with algorithms researchers, pass the key algorithm
           certification:
-          <ColorLink :href="bctcLink" target="_blank">BCTC face anti-spoofing</ColorLink>certification.
+          <ColorLink :href="bctcLink" target="_blank"
+            >BCTC face anti-spoofing</ColorLink
+          >certification.
         </li>
         <li>
           Optimized the face recognition test tools with
-          <ColorLink type="secondary" :href="faissLink" target="_blank">Faiss</ColorLink>, shortening test time nearly
-          4X.
+          <ColorLink type="secondary" :href="faissLink" target="_blank"
+            >Faiss</ColorLink
+          >, shortening test time nearly 4X.
         </li>
       </ul>
     </section>
 
     <section>
-      <h2>
-        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education
-      </h2>
+      <h2><font-awesome-icon icon="fa-solid fa-graduation-cap" /> Education</h2>
       <h3>MSc. Robotics</h3>
       <p>
         2019.10-2020.10
@@ -119,13 +128,24 @@
       <h3>BSc. Vehicle Engineering</h3>
       <p>
         2015.9-2019.6
-        <ColorLink type="secondary" :href="scutLink">@South China University of Technology </ColorLink>, China
+        <ColorLink type="secondary" :href="scutLink"
+          >@South China University of Technology </ColorLink
+        >, China
       </p>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { randomToWord } from '../utils/randomToWord'
+
+const title = ref('个人简历.')
+
+onMounted(() => {
+  randomToWord(title, 'Resume.')
+})
+
 const faissLink =
   'https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/'
 const bctcLink = 'https://www.bctest.com/content/32.html'
@@ -138,7 +158,6 @@ const scutLink =
 .aboutMe {
   width: 100%;
 }
-
 
 section {
   margin-bottom: 3rem;

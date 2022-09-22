@@ -4,22 +4,42 @@
     <div class="contents">
       <RouterView></RouterView>
     </div>
+    <div class="footer"></div>
   </div>
 </template>
 
 <script setup lang="ts">
-import NavBar from "./components/NavBar/index.vue";
+import NavBar from './components/NavBar/index.vue'
 </script>
 
 <style scoped lang="scss">
+// .layout {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   min-height: 100vh;
+//   text-align: left;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 .layout {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   text-align: left;
   justify-content: center;
-  align-items: center;
+}
+
+.contents {
+  // border: 2px dashed rgb(42, 42, 42);
+}
+
+.footer {
+  height: 70px;
+  width: 100%;
+  // border: 2px dashed rgb(42, 42, 42);
 }
 
 @media screen and (min-width: 800px) {

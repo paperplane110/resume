@@ -1,17 +1,21 @@
 <template>
   <div class="aboutMe">
-    <div style="display: flex; align-items:center; justify-content: space-between;">
+    <div
+      style="display: flex; align-items: center; justify-content: space-between"
+    >
       <Text h1>
-        个人简历.
+        {{ title }}
       </Text>
       <router-link to="/en/cv">
-        <font-awesome-icon class="lang-icon" icon="fa-solid fa-language" size="2x" />
+        <font-awesome-icon
+          class="lang-icon"
+          icon="fa-solid fa-language"
+          size="2x"
+        />
       </router-link>
     </div>
     <section>
-      <Text h2>
-        <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍
-      </Text>
+      <Text h2> <font-awesome-icon icon="fa-solid fa-smile" /> 自我介绍 </Text>
       <Text h3> 你好，我叫袁天宇！ </Text>
       <Text>
         我目前就职于一家叫做
@@ -62,7 +66,9 @@
       </h2>
       <h3>算法测试开发工程师</h3>
       <p>
-        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/">@Aibee 🐝</ColorLink>
+        2020.4-现在<ColorLink type="warning" href="https://www.aibee.cn/"
+          >@Aibee 🐝</ColorLink
+        >
       </p>
       <h3>主要职能与职责</h3>
       <ul>
@@ -94,8 +100,9 @@
           与算法工程师紧密合作，在测试中发现并总结人脸活体算法在应对实际场景时所暴露的问题。
           积极协调数据采集团队，为算法训练补充数据。
           并最终通过了金融支付领域的关键认证
-          <ColorLink :href="bctcLink" target="_blank">BCTC 银联活体认证
-          </ColorLink>。并进行了团队经验分享。
+          <ColorLink :href="bctcLink" target="_blank"
+            >BCTC 银联活体认证 </ColorLink
+          >。并进行了团队经验分享。
         </li>
         <li>
           面对千万级底库人脸识别测试时间过长的问题，主动进行相关资料的搜索和学习，
@@ -111,15 +118,15 @@
     </section>
 
     <section>
-      <h2>
-        <font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历
-      </h2>
+      <h2><font-awesome-icon icon="fa-solid fa-graduation-cap" /> 教育经历</h2>
       <h3>机器人学·硕士</h3>
       <p>
         2019.10-2020.10
         <ColorLink :href="uobLink">@布里斯托大学 </ColorLink>, 英国布里斯托
       </p>
-      <p>核心课程：图像处理与计算机视觉，人工智能导论，智能信息系统，机器人学导论</p>
+      <p>
+        核心课程：图像处理与计算机视觉，人工智能导论，智能信息系统，机器人学导论
+      </p>
 
       <h3>车辆工程·学士</h3>
       <p>
@@ -133,6 +140,15 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { randomToWord } from '../utils/randomToWord'
+
+const title = ref('Resume.')
+
+onMounted(() => {
+  randomToWord(title, '个人简历.')
+})
+
 const faissLink =
   'https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/'
 const bctcLink = 'https://www.bctest.com/content/32.html'
