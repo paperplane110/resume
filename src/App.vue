@@ -4,12 +4,13 @@
     <div class="contents">
       <RouterView></RouterView>
     </div>
-    <div class="footer"></div>
+    <Footer />
   </div>
 </template>
 
 <script setup lang="ts">
 import NavBar from './components/NavBar/index.vue'
+import Footer from './components/Footer.vue';
 </script>
 
 <style scoped lang="scss">
@@ -43,31 +44,28 @@ import NavBar from './components/NavBar/index.vue'
 }
 
 @media screen and (min-width: 800px) {
-  .contents {
-    width: 800px;
-  }
 
-  .nav {
+  .contents,
+  .nav,
+  .footer {
     width: 800px;
   }
 }
 
 @media screen and (min-width: 400px) and (max-width: 850px) {
-  .contents {
-    width: 400px;
-  }
 
-  .nav {
+  .contents,
+  .nav,
+  .footer {
     width: 400px;
   }
 }
 
 @media screen and (min-width: 300px) and (max-width: 400px) {
-  .contents {
-    width: 300px;
-  }
 
-  .nav {
+  .contents,
+  .nav,
+  .footer {
     width: 300px;
   }
 }

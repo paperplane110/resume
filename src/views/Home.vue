@@ -3,7 +3,9 @@
     <div>
       <Text h1>{{ welcom }}</Text>
       <br />
-      <Text h2><Sparkles rainbow>欢迎来到</Sparkles>，天宇的个人网站</Text>
+      <Text h2>
+        <Sparkles rainbow>欢迎来到</Sparkles>，天宇的个人网站
+      </Text>
       <Text h2>Welcom to Tianyu's personal website.</Text>
       <br />
       <Text h2>网站首页正在装修中，敬请期待🏗️</Text>
@@ -34,7 +36,7 @@ window.setInterval(() => {
   randomToWord(welcom, target)
   if (i === welcomList.length - 1) i = 0
   else i++
-}, 7000)
+}, 6000)
 </script>
 
 <style scoped>
