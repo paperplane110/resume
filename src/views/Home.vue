@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Text h1>{{ welcom }}</Text>
+      <Text h1 :style="isTengel">{{ welcom }}</Text>
       <br />
       <Text h2>
         <Sparkles rainbow>欢迎来到</Sparkles>，天宇的个人网站
@@ -11,22 +11,25 @@
       <Text h2>网站首页正在装修中，敬请期待🏗️</Text>
       <Text h2>The home page is coming soon</Text>
     </div>
+    <!-- <h1 style="font-family: Tengel">5#t~C7T`V</h1> -->
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from '@vue/reactivity';
 import { ref } from 'vue'
 import { randomToWord } from '../utils/randomToWord'
 
-const welcom = ref('Hello!')
+const welcom = ref('Hello!👋')
 
 const welcomList = [
   '你好啊，朋友!👏',
+  '5#t~C7T`V ✨',
   'Aloha!🌴',
-  'こんにちは。',
-  'Bonjour!',
-  'Hello!',
-  'Hallo!',
+  'こんにちは。🙌',
+  'Bonjour!🍾',
+  'Hello!👋',
+  'Hallo!🍻',
   'नमस्ते🙏',
 ]
 let i = 0
@@ -36,7 +39,13 @@ window.setInterval(() => {
   randomToWord(welcom, target)
   if (i === welcomList.length - 1) i = 0
   else i++
-}, 6000)
+}, 5000)
+
+const isTengel = computed(() => {
+  if (welcom.value.startsWith('5#t')) {
+    return { fontFamily: 'Tengel' }
+  } else return {}
+})
 </script>
 
 <style scoped>
