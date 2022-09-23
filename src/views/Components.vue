@@ -80,11 +80,32 @@
       </Text>
       <Description reverse src="/img/sample2.jpg" textSize="3"></Description>
     </section>
+    <section>
+      <h2><Code>Popover</Code></h2>
+      <Text
+        >Use Popover tag wrapper the component, and define the pop text with
+        it's <Popover text="Hi, there!"><Code>text</Code></Popover> props
+      </Text>
+      <Text>
+        You can also defined the text by <Code>template</Code> tag with
+        <Code>#text</Code>
+      </Text>
+      <br />
+      <div>
+        <Popover theme="white">
+          <button>Don't push me</button>
+          <template #text>
+            <Text>Oops, too late! This is an A-bomb lanuch button.</Text>
+          </template>
+        </Popover>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 import NavBar from '../components/NavBar/index.vue'
+import Popover from '../components/Popover.vue'
 
 const NextUILink = 'https://nextui.org/docs/components/text'
 </script>
