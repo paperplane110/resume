@@ -190,11 +190,12 @@ section {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 850px) {
+@media screen and (min-width: 300px) and (max-width: 940px) {
   .skills {
     flex-direction: column;
 
     &-card {
+      flex: 0 1 0;
       margin-bottom: 1rem;
     }
   }

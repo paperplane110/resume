@@ -9,7 +9,7 @@
 <style scope>
 .footer {
   width: 800px;
-  height: 70px;
+  height: 60px;
 
   display: flex;
   align-items: center;
