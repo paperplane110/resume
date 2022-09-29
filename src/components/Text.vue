@@ -38,7 +38,6 @@ const styleList = computed(() => {
   if (props.em) list.push('em')
   if (props.b) list.push('b')
   if (props.gradient) list.push('gradient')
-  console.log(list)
   return list
 })
 

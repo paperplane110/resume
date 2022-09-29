@@ -81,10 +81,15 @@
       <Description reverse src="/img/sample2.jpg" textSize="3"></Description>
     </section>
     <section>
-      <h2><Code>Popover</Code></h2>
+      <h2><Code>Tooltip</Code></h2>
       <Text
-        >Use Popover tag wrapper the component, and define the pop text with
-        it's <Popover text="Hi, there!"><Code>text</Code></Popover> props
+        >Use Tooltip tag wrapper the component, and define the pop text with
+        it's
+        <Tooltip
+          text="Hi, there! hkadhsfjkdhfkjashfkdOops, too late! This is an A-bomb lanuch button."
+          ><Code>text</Code></Tooltip
+        >
+        props
       </Text>
       <Text>
         You can also defined the text by <Code>template</Code> tag with
@@ -92,12 +97,14 @@
       </Text>
       <br />
       <div>
-        <Popover theme="white">
+        <Tooltip theme="light">
           <button>Don't push me</button>
           <template #text>
-            <Text>Oops, too late! This is an A-bomb lanuch button.</Text>
+            Oops, too late! This is an A-bomb lanuch button.Oops, too late! This
+            is an A-bomb lanuch button.Oops, too late! This is an A-bomb lanuch
+            button.Oops, too late! This is an A-bomb lanuch button.
           </template>
-        </Popover>
+        </Tooltip>
       </div>
     </section>
   </div>
@@ -105,7 +112,7 @@
 
 <script setup lang="ts">
 import NavBar from '../components/NavBar/index.vue'
-import Popover from '../components/Popover.vue'
+import Tooltip from '../components/Tooltip/Tooltip.vue'
 
 const NextUILink = 'https://nextui.org/docs/components/text'
 </script>

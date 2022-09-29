@@ -20,6 +20,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  :root {font-size: 14px}
+}
+
 html {
   overflow-y: scroll;
 }
